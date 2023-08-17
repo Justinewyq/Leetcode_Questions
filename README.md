@@ -62,11 +62,43 @@ class Solution:
         return length
 ```
 
-4. 28 - Find the Index of the First Occurrence in a String
+4. 122 - Best Time to Buy and Sell Stock II
 ```python
 class Solution:
-    def strStr(self, haystack: str, needle: str) -> int:
-        return haystack.find(needle)
+    def maxProfit(self, prices: List[int]) -> int:
+        profit = 0
+        for i in range(1, len(prices)):
+            if prices[i] > prices[i - 1]:
+                profit += prices[i] - prices[i - 1]
+        return profit
 ```
 
+5. 6 - Zigzag Conversion
+```python
+class Solution:
+    def convert(self, s: str, numRows: int) -> str:
+        if len(s) <= numRows or numRows == 1:
+            return s
+        result = ""
+        for i in range(numRows):
+            result += s[i]
+            down = 1
+            k = i
+            while True:
+                #print(k)
+                #result += s[k]
+                if down == 1 and i < numRows - 1: # if not the last row
+                    k += 2 * (numRows - i - 1)
+                elif down == 0 and i > 0: # if not the first row
+                    k += 2 * i
+                else:
+                    down = abs(1 - down)
+                    continue
+                if 0 < k < len(s):
+                    result += s[k]
+                else:
+                    break
+                down = abs(1 - down)
+        return result
+```
 
