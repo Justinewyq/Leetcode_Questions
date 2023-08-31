@@ -1,3 +1,5 @@
+https://practice.geeksforgeeks.org/problems/maximum-rectangular-area-in-a-histogram-1587115620/1
+
 Find the largest rectangular area possible in a given histogram where the largest rectangle can be made of a number of contiguous bars.
 
 * Maintain 2 lists `left_smaller` and `right_smaller`, to save the first smaller elements on the left / right of i-th element.
@@ -41,3 +43,5 @@ class Solution:
             result = max(result, cur)
         return result
 ```
+
+Leetcode: 84. Largest Rectangle in Histogram. https://leetcode.com/problems/largest-rectangle-in-histogram/description/
