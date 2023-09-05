@@ -3,8 +3,9 @@
 https://github.com/Justinewyq/Leetcode_Questions/new/main/0905
 
 Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascending order.
-Expected Time Complexity: O(N)
-Expected Auxiliary Space: O(1)
+
+* Expected Time Complexity: O(N)
+* Expected Auxiliary Space: O(1)
 
 ```python
 class Solution:
